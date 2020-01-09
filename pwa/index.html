@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en" style="height:100%">
+
+<head>
+    <meta charset="utf-8">
+    <title>Daniel Kienböck</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <style>
+        #profileImage {
+            border-radius: 50%;
+            filter: brightness(135%) grayscale(100%);
+        }
+    </style>
+</head>
+
+<body class="h-100 w-100" style="background: black;">
+    <div class="h-100 w-100 justify-content-center align-items-center d-flex flex-column flex-md-row">
+        <div id="pIContainer" class="w-50 justify-content-center align-items-center d-flex flex-column">
+            <img id="profileImage" class="w-100" src="assets/photo2018.jpg" alt="Daniel Kienböck" />
+        </div>
+        <div id="qrContainer" class="w-50 justify-content-center align-items-center d-flex flex-column flex-md-row">
+            <img id="qrCode" class="w-100" src="assets/qr.png" alt="mail address qr code">
+        </div>
+    </div>
+
+    <script>
+        if(navigator && navigator.serviceWorker) {
+            navigator.serviceWorker.register('service-worker.js');
+        }
+    </script>
+</body>
+
+</html>
